@@ -336,7 +336,7 @@ reward_settings:
 
 reward:
   wechatpay: /images/wechat-pay.png
-  alipay: /images/alipay.png
+  alipay: /images/ali-pay.png
   #bitcoin: /images/bitcoin.png
 
 # Related popular posts
