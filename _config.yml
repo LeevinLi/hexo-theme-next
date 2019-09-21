@@ -333,7 +333,7 @@ reward_settings:
   # You can show or hide reward in a specific article throuth `reward: true | false` in Front-matter.
   enable: true
   animation: false
-  comment: 您的支持将鼓励我继续创作！
+  comment: 码字不易，请我喝杯咖啡吧
 
 reward:
   wechatpay: /images/wechat-pay.png
@@ -654,16 +654,16 @@ changyan:
 # For more information: https://valine.js.org, https://github.com/xCss/Valine
 valine:
   enable: true # When enable is set to be true, leancloud_visitors is recommended to be closed for the re-initialization problem within different leancloud adk version
-  app_id: ipxab7bX2MrvynUCLiHxvjGy-gzGzoHsz
-  app_key: z1vAkSLfzt2rnsIV1xngou4s
+  appid: ipxab7bX2MrvynUCLiHxvjGy-gzGzoHsz
+  appkey: z1vAkSLfzt2rnsIV1xngou4s
   notify: false # Mail notifier. See: https://github.com/xCss/Valine/wiki
   verify: false # Verification code
-  placeholder: 留下你的笔迹吧^_^
+  placeholder: 兄台，留下你的笔迹吧^_^
   avatar: mm # Gravatar style
   guest_info: nick,mail,link # Custom comment header
   pageSize: 10 # Pagination size
   language: # Language, available values: en, zh-cn
-  visitor: false # leancloud-counter-security is not supported for now. When visitor is set to be true, appid and appkey are recommended to be the same as leancloud_visitors' for counter compatibility. Article reading statistic https://valine.js.org/visitor.html
+  visitor: true # leancloud-counter-security is not supported for now. When visitor is set to be true, appid and appkey are recommended to be the same as leancloud_visitors' for counter compatibility. Article reading statistic https://valine.js.org/visitor.html
   comment_count: true # If false, comment count will only be displayed in post page, not in home page
   #post_meta_order: 0
 
@@ -759,7 +759,7 @@ application_insights:
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn to get AppID and AppKey.
 leancloud_visitors:
-  enable: false
+  enable: true
   app_id: ipxab7bX2MrvynUCLiHxvjGy-gzGzoHsz
   app_key: z1vAkSLfzt2rnsIV1xngou4s
   # Dependencies: https://github.com/theme-next/hexo-leancloud-counter-security
