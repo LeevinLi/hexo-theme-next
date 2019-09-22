@@ -170,7 +170,6 @@ menu_settings:
   icons: true
   badges: true
 
-
 # ---------------------------------------------------------------
 # Scheme Settings
 # ---------------------------------------------------------------
@@ -216,12 +215,12 @@ social_icons:
 # Blog rolls
 links_settings:
   icon: link
-  title: 有新链接
+  title: 友情链接
   # Available values: block | inline
   layout: block
 
 links:
-  #Title: http://baidu.com
+  Androidxref: http://androidxref.com
 
 # Sidebar Avatar
 avatar:
