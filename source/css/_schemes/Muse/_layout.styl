@@ -1,17 +1,28 @@
-.header-inner, .container .main-inner, .footer-inner {
+.main-inner {
+  main-container();
+
+  +mobile() {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.header-inner, .main-inner, .footer-inner {
   +mobile() {
     width: auto;
   }
 }
 
-.header-inner {
-  +mobile() {
-    padding: 50px 0 35px;
-  }
+// Page - Container
+// --------------------------------------------------
+.main-inner {
+  padding-bottom: $content-padding-bottom;
 }
 
-// embed tag
-embed {
-  display: block;
-  margin: 0 auto 25px auto;
+.post-block:first-of-type {
+  padding-top: $posts-first-padding;
+
+  +mobile() {
+    padding-top: $posts-first-padding-mobile;
+  }
 }

@@ -6,16 +6,14 @@
 
   to {
     opacity: 0;
-    transform: scale(0.8);
+    transform: scale(.8);
   }
 }
 
-#event-list {
-  padding: 0px;
-
+.event-list {
   hr {
     background: $black-deep;
-    margin: 20px 0 45px 0;
+    margin: 20px 0 45px;
 
     &::after {
       background: $black-deep;
@@ -24,56 +22,62 @@
       display: inline-block;
       font-weight: bold;
       padding: 0 5px;
-      text-align: right;
     }
   }
 
-  li.event {
-    background: #f9f9f9;
-    margin: 20px 0;
-    min-height: 40px;
-    padding-left: 10px;
+  .event {
+    --event-background: $black-deep;
+    --event-foreground: $grey;
+    --event-title: white;
+    background: var(--event-background);
+    padding: 15px;
 
-    h2.event-summary {
+    .event-summary {
+      border-bottom: 0;
+      color: var(--event-title);
       margin: 0;
-      padding-bottom: 3px;
+      padding: 0 0 0 35px;
+      position: relative;
 
       &::before {
-        color: $grey;
-        content: '\f111';
-        display: inline-block;
-        font-family: $font-family-icons;
-        font-size: 10px;
-        margin-right: 25px;
-        vertical-align: middle;
+        animation: dot-flash 1s alternate infinite ease-in-out;
+        background: var(--event-title);
+        left: 0;
+        margin-top: -6px;
+        position: absolute;
+        top: 50%;
+        round-icon(12px);
       }
     }
 
-    span.event-relative-time {
-      color: $grey;
+    &:nth-of-type(odd) .event-summary::before {
+      animation-delay: .5s;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    .event-relative-time {
+      color: var(--event-foreground);
       display: inline-block;
       font-size: 12px;
-      font-weight: $font-weight-normal;
+      font-weight: normal;
       padding-left: 12px;
     }
 
-    span.event-details {
-      color: $grey;
+    .event-details {
+      color: var(--event-foreground);
       display: block;
       line-height: 18px;
-      margin-left: 56px;
-      padding-bottom: 6px;
-      padding-top: 3px;
-      text-indent: -24px;
+      padding: 6px 0 6px 35px;
 
       &::before {
-        color: $grey;
+        color: var(--event-foreground);
         display: inline-block;
-        font-family: FontAwesome;
         margin-right: 9px;
-        text-align: center;
-        text-indent: 0;
         width: 14px;
+        font-family-icons();
       }
 
       &.event-location::before {
@@ -83,57 +87,16 @@
       &.event-duration::before {
         content: '\f017';
       }
-    }
-  }
 
-  li.event-past {
-    background: #fcfcfc;
-    padding: 15px 0 15px 10px;
-
-    > * {
-      opacity: .9;
-    }
-
-    h2.event-summary {
-      color: $grey;
-
-      &::before {
-        color: #dfdfdf;
+      &.event-description::before {
+        content: '\f024';
       }
     }
   }
 
-  li.event-now {
-    background: $black-deep;
-    color: white;
-    padding: 15px 0 15px 10px;
-
-    h2.event-summary {
-      &::before {
-        animation: dot-flash 1s alternate infinite ease-in-out;
-        color: white;
-      }
-    }
-
-    * {
-      color: white !important;
-    }
-  }
-
-  li.event-future {
-    background: $black-deep;
-    color: white;
-    padding: 15px 0 15px 10px;
-
-    h2.event-summary {
-      &::before {
-        animation: dot-flash 1s alternate infinite ease-in-out;
-        color: white;
-      }
-    }
-
-    * {
-      color: white !important;
-    }
+  .event-past {
+    --event-background: $whitesmoke;
+    --event-foreground: $grey-dark;
+    --event-title: $black-deep;
   }
 }
