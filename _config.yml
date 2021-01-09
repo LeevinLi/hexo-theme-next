@@ -83,9 +83,9 @@ menu:
   home: / || fa fa-home
   categories: /categories/ || fa fa-th
   tags: /tags/ || fa fa-tags
+  archives: /archives/ || fa fa-archive
   about: /about/ || fa fa-user
-  
-  #archives: /archives/ || fa fa-archive
+
   #schedule: /schedule/ || fa fa-calendar
   #sitemap: /sitemap.xml || fa fa-sitemap
   #commonweal: /404/ || fa fa-heartbeat
@@ -358,10 +358,10 @@ codeblock:
   # All available themes: https://theme-next.js.org/highlight/
   theme:
     light: default
-    dark: tomorrow-night
+    dark: a11y-dark
   prism:
     light: prism
-    dark: prism-dark
+    dark: dark
   # Add copy button on codeblock
   copy_button:
     enable: false
