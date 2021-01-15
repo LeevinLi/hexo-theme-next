@@ -357,8 +357,8 @@ codeblock:
   # Code Highlight theme
   # All available themes: https://theme-next.js.org/highlight/
   theme:
-    light: default
-    dark: a11y-dark
+    light: atom-one-light
+    dark: atom-one-light
   prism:
     light: prism
     dark: dark
